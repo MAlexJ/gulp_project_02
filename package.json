@@ -1,0 +1,8 @@
+{
+  "name": "gulp_project_01",
+  "version": "0.1.0",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "wiredep": "^4.0.0"
+  }
+}

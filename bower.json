@@ -1,0 +1,9 @@
+{
+  "name": "gulp_project_02",
+  "version": "0.1.0",
+  "dependencies": {
+    "jquery": "1.8",
+    "normalize-css": "normalize.css#^5.0.0",
+    "tooltipster": "^4.1.6"
+  }
+}
