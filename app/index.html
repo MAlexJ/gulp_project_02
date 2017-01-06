@@ -4,14 +4,17 @@
     <meta charset="utf-8">
     <title>Gulp Project 02</title>
 
+    <!-- build:css css/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
     <link rel="stylesheet" href="bower_components/tooltipster/dist/css/tooltipster.bundle.css" />
     <!-- endbower -->
+    <!-- endbuild -->
 
+    <!-- build:css css/combined.css -->
     <link rel="stylesheet" href="css/component.css">
     <link rel="stylesheet" href="css/main.css">
-
+    <!-- endbuild -->
 </head>
 <body>
 <div id="id_div">
@@ -21,13 +24,17 @@
     <p>text text tex ....</p>
 </div>
 
+<!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/tooltipster/dist/js/tooltipster.bundle.js"></script>
 <!-- endbower -->
+<!-- endbuild -->
 
+<!-- build:js scripts/main.js -->
 <script src="js/script.js"></script>
 <script src="js/component.js"></script>
+<!-- endbuild -->
 
 </body>
 </html>

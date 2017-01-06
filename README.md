@@ -65,7 +65,7 @@ Bower installs packages to bower_components/.
 bower install --save jquery
 
 bower install --save normalize.css
-</pre.
+</pre>
 
 **Step #5**
 
@@ -90,3 +90,59 @@ gulp.task('watch', function () {
     gulp.watch('bower.json', ['bower']);
 });
 </pre>
+
+**Step #5**
+
+1. Install:
+
+<pre>
+npm install --save-dev gulp-useref
+
+npm install --save-dev gulp-if
+
+npm install --save-dev gulp-uglify
+
+npm install --save-dev gulp-clean-css
+
+</pre>
+
+2. Create a new task:
+
+<pre>
+// Html
+gulp.task('html', function () {
+    return gulp.src('app/*.html')
+        .pipe(useref())
+        .pipe(gulpif('*.js', uglify()))
+        .pipe(gulpif('*.css', minifyCss()))
+        .pipe(gulp.dest('dist'));
+});
+
+</pre>
+
+3. Set Blocks are expressed:
+
+<pre>
+<!-- build:<type>(alternate search path) <path> <parameters> -->
+... HTML Markup, list of script / link tags.
+<!-- endbuild -->
+</pre>
+
+**Step #6**
+
+1. install :
+<pre>
+npm install --save-dev gulp-clean
+</pre>
+
+2. Add in gulpfile.js
+<pre>
+var clean = require('gulp-clean');
+ 
+ // Clean 
+gulp.task('default', function () {
+    return gulp.src('dist', {read: false})
+        .pipe(clean());
+});
+</pre>
+
